@@ -1,3 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">trens</string>
+
+    <string name="title_app">trens</string>
+    <string name="section_route">Trajeto</string>
+    <string name="label_date">Data</string>
+    <string name="label_time">Hora</string>
+
+    <string name="origin_hint">Origem</string>
+    <string name="destination_hint">Destino</string>
+    <string name="date_hint">Data (AAAA-MM-DD)</string>
+    <string name="time_hint">Hora (HH:MM)</string>
+
+    <string name="btn_invert">⇅</string>
+    <string name="btn_refresh">↻ Atualizar</string>
+    <string name="btn_plan">Buscar plano</string>
+    <string name="btn_save_trajeto">★ Salvar</string>
+    <string name="btn_manage_trajetos">Organizar</string>
+
+    <string name="next_train_header">Próximo trem</string>
+    <string name="plan_trip_header">Planejar viagem</string>
+
+    <string name="loading_stations">Carregando estações…</string>
+    <string name="select_valid_stations">Escolha estações válidas da lista.</string>
+    <string name="searching">Buscando…</string>
+    <string name="no_realtime_data">Sem dados em tempo real no momento.</string>
+    <string name="no_trains_scheduled">Sem trens previstos no momento.</string>
+    <string name="transfer_at">Baldeação em %1$s%2$s</string>
+    <string name="no_trips_found">Nenhuma viagem encontrada.</string>
+    <string name="last_trip_of_day">Último trem do dia</string>
+    <string name="error_prefix">Erro: %1$s</string>
+
+    <string name="dialog_saved_trajetos_title">Organizar Trajetos</string>
+    <string name="dialog_rename_trajeto_title">Nome do Trajeto</string>
+    <string name="btn_close">Fechar</string>
+    <string name="btn_delete">Excluir</string>
+    <string name="btn_rename">Renomear</string>
+    <string name="msg_trajeto_saved">Trajeto salvo!</string>
 </resources>

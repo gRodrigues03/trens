@@ -7,4 +7,24 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="box_background">#1A808080</color>
+
+    <!-- Grayscale Base -->
+    <color name="app_background">#F5F5F5</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_border">#E0E0E0</color>
+    <color name="input_background">#FAFAFA</color>
+    <color name="input_border">#D6D6D6</color>
+    <color name="button_primary_bg">#212121</color>
+    <color name="button_primary_text">#FFFFFF</color>
+    <color name="text_primary">#121212</color>
+    <color name="text_secondary">#666666</color>
+
+    <!-- Functional Status Accents -->
+    <color name="train_incoming">#D97706</color> <!-- Standard Yellow/Amber for incoming train -->
+    <color name="status_unavailable">#DC2626</color> <!-- Standard Red for unavailable data / errors -->
+    <color name="badge_warning_bg">#FEF3C7</color>
+    <color name="badge_warning_text">#92400E</color>
+    <color name="transfer_bg">#FFFBEB</color>
+    <color name="transfer_border">#FCD34D</color>
 </resources>
