@@ -14,13 +14,19 @@ android {
         minSdk = 37
         targetSdk = 37
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             optimization {
                 enable = true
                 packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
@@ -31,8 +37,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_26
         targetCompatibility = JavaVersion.VERSION_26
     }
+    lint {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(26))
+    }
     buildFeatures {
         compose = true
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(26))
     }
 }
 

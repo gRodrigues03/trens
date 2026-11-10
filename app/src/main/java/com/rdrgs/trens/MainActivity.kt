@@ -157,11 +157,11 @@ class MainActivity : Activity() {
 
     private fun saveSavedTrajetos() {
         val arr = JSONArray()
-        for (t in savedTrajetos) {
+        for ((name, origin, dest) in savedTrajetos) {
             val obj = JSONObject()
-                .put("name", t.name)
-                .put("origin", t.origin)
-                .put("dest", t.dest)
+                .put("name", name)
+                .put("origin", origin)
+                .put("dest", dest)
             arr.put(obj)
         }
         prefs.edit { putString("saved_trajetos_list", arr.toString()) }
