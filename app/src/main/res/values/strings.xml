@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">trens</string>
     <string name="developer_nickname">rdrgs</string>
-    <string name="developer_name">Gabriel Rodrigues</string>
 
     <string name="section_route">Trajeto</string>
     <string name="label_date">Data</string>

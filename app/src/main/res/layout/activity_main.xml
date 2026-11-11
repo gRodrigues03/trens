@@ -40,20 +40,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
                     android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:letterSpacing="0.05"
                         android:text="@string/section_route"
+                        android:textAllCaps="true"
                         android:textColor="@color/text_secondary"
                         android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textAllCaps="true"
-                        android:letterSpacing="0.05" />
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btnSaveTrajeto"
@@ -89,8 +89,8 @@
                         <AutoCompleteTextView
                             android:id="@+id/origin"
                             style="@style/StationField"
-                            android:hint="@string/origin_hint"
-                            android:layout_marginBottom="8dp" />
+                            android:layout_marginBottom="8dp"
+                            android:hint="@string/origin_hint" />
 
                         <AutoCompleteTextView
                             android:id="@+id/dest"
@@ -131,17 +131,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
                     style="@style/SectionHeader"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
                     android:text="@string/next_train_header" />
 
                 <Button
@@ -181,17 +181,17 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
                             android:text="@string/label_date"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12sp"
-                            android:layout_marginBottom="4dp"/>
+                            android:textSize="12sp" />
 
                         <EditText
                             android:id="@+id/date"
@@ -202,17 +202,17 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginStart="4dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
                             android:text="@string/label_time"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12sp"
-                            android:layout_marginBottom="4dp"/>
+                            android:textSize="12sp" />
 
                         <EditText
                             android:id="@+id/time"
@@ -237,24 +237,31 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:fontFamily="serif-monospace"
-                android:text="@string/developer_nickname"
-                android:textColor="@color/text_primary"
-                android:textSize="22sp"
-                android:textStyle="normal" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:fontFamily="sans-serif-thin"
-                android:text="@string/developer_name"
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp"
-                android:textStyle="normal" />
+                android:paddingTop="8dp"
+                android:paddingBottom="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="@string/developer_nickname"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Gabriel Rodrigues"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
