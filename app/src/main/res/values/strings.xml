@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">trens</string>
+    <string name="developer_nickname">rdrgs</string>
+    <string name="developer_name">Gabriel Rodrigues</string>
 
-    <string name="title_app">trens</string>
     <string name="section_route">Trajeto</string>
     <string name="label_date">Data</string>
     <string name="label_time">Hora</string>

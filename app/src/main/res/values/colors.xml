@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
     <color name="box_background">#1A808080</color>
 
     <!-- Grayscale Base -->
-    <color name="app_background">#F5F5F5</color>
-    <color name="card_background">#FFFFFF</color>
-    <color name="card_border">#E0E0E0</color>
-    <color name="input_background">#FAFAFA</color>
-    <color name="input_border">#D6D6D6</color>
-    <color name="button_primary_bg">#212121</color>
-    <color name="button_primary_text">#FFFFFF</color>
-    <color name="text_primary">#121212</color>
-    <color name="text_secondary">#666666</color>
+    <color name="app_background">#000</color>
+    <color name="card_background">#1E1E1E</color>
+    <color name="card_border">#2C2C2C</color>
+    <color name="input_background">#181818</color>
+    <color name="input_border">#333333</color>
+    <color name="button_primary_bg">#E0E0E0</color>
+    <color name="button_primary_text">#121212</color>
+    <color name="text_primary">#EEEEEE</color>
+    <color name="text_secondary">#AAAAAA</color>
 
     <!-- Functional Status Accents -->
-    <color name="train_incoming">#D97706</color> <!-- Standard Yellow/Amber for incoming train -->
-    <color name="status_unavailable">#DC2626</color> <!-- Standard Red for unavailable data / errors -->
-    <color name="badge_warning_bg">#FEF3C7</color>
-    <color name="badge_warning_text">#92400E</color>
-    <color name="transfer_bg">#FFFBEB</color>
-    <color name="transfer_border">#FCD34D</color>
+    <color name="train_incoming">#FBBF24</color>
+    <color name="status_unavailable">#F87171</color>
+    <color name="badge_warning_bg">#451A03</color>
+    <color name="badge_warning_text">#FDE68A</color>
+    <color name="transfer_bg">#451A03</color>
+    <color name="transfer_border">#B45309</color>
 </resources>

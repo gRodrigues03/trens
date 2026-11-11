@@ -13,8 +13,8 @@ android {
         applicationId = "com.rdrgs.trens"
         minSdk = 37
         targetSdk = 37
-        versionCode = 1
-        versionName = "1"
+        versionCode = 2
+        versionName = "2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,7 +50,6 @@ java {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
