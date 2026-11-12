@@ -4,7 +4,7 @@ um aplicativo pra consultar a API dos trens que trafegam por aí num certo estad
 
 sem conta, sem anúncios, sem coleta de dados. somente o próximo trem, grade horária e nada mais.
 
-rápido e direto ao ponto. o APK final pesa uns `300kb`.
+rápido e direto ao ponto. o APK final pesa uns `46kb`.
 
 ### ⚠️ estado atual do projeto
 esse aplicativo é uns **80% vibecoded**. funciona perfeitamente bem, mas algumas respostas (ou ausência de) da API podem ser que não sejam tratadas.
