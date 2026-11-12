@@ -15,10 +15,6 @@ import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.edit
-import androidx.core.graphics.toColorInt
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import org.json.JSONArray
 import org.json.JSONObject
 import java.net.HttpURLConnection
@@ -74,7 +70,7 @@ class MainActivity : Activity() {
         if (isNull(key)) null else optString(key).ifBlank { null }
 
     private fun color(hex: String?): Int? =
-        hex?.let { runCatching { "#$it".toColorInt() }.getOrNull() }
+        hex?.let { runCatching { android.graphics.Color.parseColor("#$it") }.getOrNull() }
 
     // ---------- lifecycle ----------
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -112,16 +108,20 @@ class MainActivity : Activity() {
         btnManageTrajetos.setOnClickListener { showManageDialog() }
 
         // Modern edge-to-edge insets handling
-        ViewCompat.setOnApplyWindowInsetsListener(root) { v, windowInsets ->
-            val bars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            val p16 = 16
-            v.setPadding(
-                p16 + bars.left,
-                p16 + bars.top,
-                p16 + bars.right,
-                0
-            )
-            windowInsets
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            root.setOnApplyWindowInsetsListener { v, windowInsets ->
+                val bars = windowInsets.getInsets(android.view.WindowInsets.Type.systemBars())
+                val p16 = 16
+                v.setPadding(p16 + bars.left, p16 + bars.top, p16 + bars.right, 0)
+                windowInsets
+            }
+        } else {
+            @Suppress("DEPRECATION")
+            root.setOnApplyWindowInsetsListener { v, insets ->
+                val p16 = 16
+                v.setPadding(p16 + insets.systemWindowInsetLeft, p16 + insets.systemWindowInsetTop, p16 + insets.systemWindowInsetRight, 0)
+                insets
+            }
         }
 
         loadSavedTrajetos()
@@ -164,7 +164,7 @@ class MainActivity : Activity() {
                 .put("dest", dest)
             arr.put(obj)
         }
-        prefs.edit { putString("saved_trajetos_list", arr.toString()) }
+        prefs.edit().putString("saved_trajetos_list", arr.toString()).apply()
     }
 
     private fun updateSavedChipsUI() {
@@ -372,7 +372,7 @@ class MainActivity : Activity() {
         val cached = prefs.getString("stations", null)
         if (cached != null) {
             runCatching { applyStations(cached) }.onSuccess { return }
-            prefs.edit { remove("stations") } // corrupted cache: fetch again
+            prefs.edit().remove("stations").apply() // corrupted cache: fetch again
         }
         nextBox.addView(label(getString(R.string.loading_stations), R.style.TextBody))
         bg({
@@ -382,7 +382,7 @@ class MainActivity : Activity() {
             txt
         }) { r ->
             r.onSuccess {
-                prefs.edit { putString("stations", it) }
+                prefs.edit().putString("stations", it).apply()
                 applyStations(it)
             }.onFailure { showError(nextBox, it) }
         }
@@ -433,7 +433,7 @@ class MainActivity : Activity() {
             nextBox.addView(label("Escolha estações válidas da lista.", R.style.TextCaption))
             return
         }
-        prefs.edit { putString("o", o.name).putString("d", d.name) }
+        prefs.edit().putString("o", o.name).putString("d", d.name).apply()
         nextBox.addView(label(getString(R.string.searching), R.style.TextBody))
         bg({ api("/trips/next?originId=${o.id}&destinationId=${d.id}") }) { r ->
             if (my != nextSeq) return@bg
