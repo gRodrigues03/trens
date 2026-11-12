@@ -15,4 +15,4 @@ foi feito via engenharia reversa do app em react native do android, tudo que foi
 
 ### 📜 licença
 
-distribuído sob a licença **MIT**. veja o arquivo `LICENSE` para mais detalhes.
+distribuído sob a [licença **MIT**](./LICENSE). veja o arquivo `LICENSE` para mais detalhes.
