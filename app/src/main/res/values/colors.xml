@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#BB86FC</color>
-    <color name="purple_500">#6200EE</color>
-    <color name="purple_700">#3700B3</color>
-    <color name="teal_200">#03DAC5</color>
-    <color name="teal_700">#018786</color>
     <color name="black">#000</color>
     <color name="white">#FFF</color>
-    <color name="box_background">#1A808080</color>
-
-    <!-- Grayscale Base -->
-    <color name="app_background">#000</color>
-    <color name="card_background">#1E1E1E</color>
-    <color name="card_border">#2C2C2C</color>
-    <color name="input_background">#181818</color>
-    <color name="input_border">#333333</color>
-    <color name="button_primary_bg">#E0E0E0</color>
-    <color name="button_primary_text">#121212</color>
     <color name="text_primary">#EEEEEE</color>
     <color name="text_secondary">#AAAAAA</color>
-
-    <!-- Functional Status Accents -->
-    <color name="train_incoming">#FBBF24</color>
-    <color name="status_unavailable">#F87171</color>
-    <color name="badge_warning_bg">#451A03</color>
     <color name="badge_warning_text">#FDE68A</color>
-    <color name="transfer_bg">#451A03</color>
-    <color name="transfer_border">#B45309</color>
 </resources>

@@ -114,12 +114,12 @@ class MainActivity : Activity() {
         // Modern edge-to-edge insets handling
         ViewCompat.setOnApplyWindowInsetsListener(root) { v, windowInsets ->
             val bars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            val p16 = resources.getDimensionPixelSize(R.dimen.padding_root)
+            val p16 = 16
             v.setPadding(
                 p16 + bars.left,
                 p16 + bars.top,
                 p16 + bars.right,
-                p16 + bars.bottom
+                0
             )
             windowInsets
         }
@@ -430,7 +430,7 @@ class MainActivity : Activity() {
         val d = station(dest.text.toString())
         nextBox.removeAllViews()
         if (o == null || d == null) {
-            nextBox.addView(label(getString(R.string.select_valid_stations), R.style.TextCaption))
+            nextBox.addView(label("Escolha estações válidas da lista.", R.style.TextCaption))
             return
         }
         prefs.edit { putString("o", o.name).putString("d", d.name) }
@@ -464,7 +464,7 @@ class MainActivity : Activity() {
     private fun renderNext(j: JSONObject) {
         nextBox.removeAllViews()
         if (j.has("error")) { // e.g. NO_SERVICE
-            nextBox.addView(label(j.str("message") ?: getString(R.string.no_realtime_data), R.style.TextUnavailable))
+            nextBox.addView(label(j.str("message") ?: "Sem dados em tempo real no momento.", R.style.TextUnavailable))
             return
         }
         val deps = j.optJSONArray("departures")
